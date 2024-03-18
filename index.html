@@ -22,6 +22,7 @@
     <label for="operasi">Pilih Operasi:</label>
     <select id="operasi">
       <option value="penjumlahan">Penjumlahan (+)</option>
+      <option value="pengurangan">Pengurangan (-)</option>
     </select>
     <br />
     <button onclick="hitung()">Hitung</button>
@@ -42,6 +43,9 @@
         switch (operasi) {
           case "penjumlahan":
             hasil = bilangan1 + bilangan2;
+            break;
+          case "pengurangan":
+            hasil = bilangan1 - bilangan2;
             break;
         }
 

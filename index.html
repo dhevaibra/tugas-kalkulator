@@ -24,6 +24,7 @@
       <option value="penjumlahan">Penjumlahan (+)</option>
       <option value="pengurangan">Pengurangan (-)</option>
       <option value="perkalian">Perkalian (*)</option>
+      <option value="modulus">Modulus sisa hasil bagi(%)</option>
     </select>
     <br />
     <button onclick="hitung()">Hitung</button>
@@ -51,6 +52,11 @@
           case "perkalian":
             hasil = bilangan1 * bilangan2;
             break;
+          case "modulus":
+            hasil = bilangan1 % bilangan2;
+            break;
+          default:
+            hasil = "Pilih operasi terlebih dahulu.";
         }
 
         document.getElementById("hasil").textContent = hasil;

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <h3>Identitas</h3>
+    <p>Nama: Dheva Ibra Hubie Iswara</p>
+    <p>NIM: 6701223057</p>
+    <p>Kelas: D3SI-46-02</p>
+    <!-- Membuat Input 2 bilangan -->
+    <h1>Kalkulator Sederhana</h1>
+    <label for="bilangan1"> Bilangan 1:</label>
+    <input type="number" id="bilangan1" />
+    <br />
+    <label for="bilangan2"> Bilangan 2:</label>
+    <input type="number" id="bilangan2" />
+    <br />
+    <!-- Opsi Perhitungan Aritmatika -->
+    <label for="operasi">Pilih Operasi:</label>
+    <select id="operasi">
+      <option value="penjumlahan">Penjumlahan (+)</option>
+    </select>
+    <br />
+    <button onclick="hitung()">Hitung</button>
+    <br />
+    <p>Hasil: <span id="hasil"></span></p>
+
+    <script>
+      function hitung() {
+        const bilangan1 = parseFloat(
+          document.getElementById("bilangan1").value
+        );
+        const bilangan2 = parseFloat(
+          document.getElementById("bilangan2").value
+        );
+        const operasi = document.getElementById("operasi").value;
+        let hasil;
+
+        switch (operasi) {
+          case "penjumlahan":
+            hasil = bilangan1 + bilangan2;
+            break;
+        }
+
+        document.getElementById("hasil").textContent = hasil;
+      }
+    </script>
+  </body>
+</html>
